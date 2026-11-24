@@ -1,0 +1,503 @@
+
+/* =================================
+   1. REINITIALISATION
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #5b247a, #a044a0, #e58ab8);
+    color: #292139;
+    min-height: 100vh;
+}
+
+/* =================================
+   2. NAVIGATION
+================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #39204f;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar nav a {
+    color: #f8eaff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffacd5;
+    font-weight: bold;
+}
+
+/* =================================
+   3. ACCUEIL
+================================= */
+
+.page {
+    width: 92%;
+    max-width: 1150px;
+    margin: 110px auto 50px;
+}
+
+.intro {
+    text-align: center;
+    color: white;
+    padding: 35px 10px;
+}
+
+.intro-small {
+    color: #ffd1e8;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.intro h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.intro p:last-child {
+    font-size: 16px;
+}
+
+/* =================================
+   4. RECHERCHE
+================================= */
+
+.search-section {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #f4c9e4;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.search-section input:focus {
+    border-color: #ffacd5;
+}
+
+.result-info {
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* =================================
+   5. GRILLE DES POKEMONS
+================================= */
+
+.pokemon-grid {
+    width: 100%;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* =================================
+   6. CARTES
+================================= */
+
+.carte {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(160deg, #ffffff, #fff0f8);
+    border: 2px solid #f5c4df;
+    border-radius: 22px;
+    padding: 25px 18px;
+    min-height: 355px;
+    box-shadow: 0 8px 20px rgba(40, 10, 60, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 25px rgba(40, 10, 60, 0.3);
+}
+
+/* Numéro dans un cadre */
+
+.pokedex-number {
+    align-self: flex-start;
+    background: linear-gradient(135deg, #6d3a91, #d65caa);
+    color: white;
+    border: 2px solid #f7c8e4;
+    border-radius: 12px;
+    padding: 7px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Images */
+
+.carte img {
+    width: 100%;
+    max-width: 180px;
+    height: 165px;
+    object-fit: contain;
+    margin: 12px auto;
+}
+
+.carte h3 {
+    color: #54266f;
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.carte p {
+    color: #5d5267;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Type */
+
+.card-type {
+    background: #f9d8ed;
+    color: #75356e;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 7px 0 14px;
+}
+
+/* Lien détails */
+
+.details-link {
+    display: inline-block;
+    margin-top: auto;
+    padding: 11px 20px;
+    background: linear-gradient(135deg, #633487, #bd55a0);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.details-link:hover {
+    background: #42205d;
+    transform: scale(1.04);
+}
+
+/* =================================
+   7. PAGE DETAILS
+================================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 105px auto 50px;
+}
+
+.back-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 25px;
+}
+
+.back-link:hover {
+    color: #ffd1e8;
+}
+
+.details-heading {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.details-heading p {
+    color: #ffd1e8;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.details-heading h1 {
+    font-size: 30px;
+}
+
+/* =================================
+   8. CARTE DE DETAILS
+================================= */
+
+.card-details {
+    display: flex;
+    gap: 30px;
+    background: #fff8fc;
+    padding: 30px;
+    border: 2px solid #f6c4df;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(35, 10, 50, 0.25);
+}
+
+/* Image et numéro */
+
+.image-box {
+    flex: 1;
+    min-width: 0;
+    min-height: 350px;
+    background: linear-gradient(145deg, #fce2f1, #eee1ff);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-number {
+    background: linear-gradient(135deg, #65358b, #d65caa);
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid #f7bde0;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.image-box img {
+    max-width: 100%;
+    width: 280px;
+    height: 270px;
+    object-fit: contain;
+}
+
+/* Informations */
+
+.info-box {
+    flex: 1.2;
+    min-width: 0;
+}
+
+.pokemon-name {
+    color: #54266f;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.type-container {
+    margin-bottom: 22px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #f5d4ed;
+    color: #74336f;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* =================================
+   9. CARACTERISTIQUES
+================================= */
+
+.section-title {
+    color: #633487;
+    font-size: 19px;
+    margin: 20px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f1c6e1;
+}
+
+.characteristics {
+    list-style: none;
+    background: #fff0f8;
+    border-radius: 14px;
+    padding: 15px;
+}
+
+.characteristics li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 4px;
+    border-bottom: 1px solid #f2d8e9;
+    font-size: 14px;
+}
+
+.characteristics li:last-child {
+    border-bottom: none;
+}
+
+.characteristics li span {
+    color: #76677d;
+}
+
+.characteristics li strong {
+    color: #482568;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* =================================
+   10. STATISTIQUES
+================================= */
+
+.stats {
+    margin-top: 20px;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stat-label {
+    width: 80px;
+    flex-shrink: 0;
+    color: #594766;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.bar-bg {
+    flex: 1;
+    min-width: 0;
+    height: 13px;
+    background: #e8dfea;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #a64cba, #ff8fc7);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.stat-value {
+    width: 48px;
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    color: #633487;
+}
+
+/* =================================
+   11. FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 25px 10px;
+    background: rgba(45, 20, 65, 0.35);
+    margin-top: 40px;
+}
+
+/* =================================
+   12. RESPONSIVE
+================================= */
+
+@media screen and (max-width: 800px) {
+
+    .grille {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-details {
+        flex-direction: column;
+    }
+
+    .image-box {
+        min-height: 280px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .navbar nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .intro h1 {
+        font-size: 27px;
+    }
+
+    .grille {
+        grid-template-columns: 1fr;
+    }
+
+    .card-details {
+        padding: 16px;
+    }
+
+    .pokemon-name {
+        font-size: 26px;
+    }
+
+    .stat-label {
+        width: 68px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}

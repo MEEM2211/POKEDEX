@@ -1,0 +1,175 @@
+/* Style Général */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+body {
+    background-color: #2D1B4E;
+    color: #333;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color:#4A2C6B;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-radius: 10px 10px 0 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.navbar nav a.active {
+    font-weight: bold;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    color: palevioletred;
+    text-decoration:none;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 24px 24px 8px;
+}
+
+.page-title {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: blanchedalmond;
+    font-size: 1.5rem;
+}
+
+/* Carte de détails */
+.card-details {
+    background-color: purple;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    box-shadow: 0 4px 12px ;
+}
+
+/* Image */
+.image-box {
+    background-color: #fef4cf;
+    border-radius: 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 250px;
+    min-width: 0;
+}
+
+.image-box img {
+    max-width: 100%;
+    height:auto;
+}
+
+/* Bloc d'informations */
+.info-box {
+    flex: 1.2;
+}
+
+.pokemon-id {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.pokemon-name {
+    font-size: 1.8rem;
+    color: #1a2b49;
+    margin-bottom: 10px;
+}
+
+/* Badge de type */
+.badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge-normal {
+    background-color: #fde89b;
+    color: #725a00;
+}
+
+/* Caractéristiques */
+.characteristics {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.characteristics li {
+    margin-bottom: 5px;
+}
+
+/* Statistiques & Barres de progression */
+.stats h3 {
+    font-size: 0.95rem;
+    color: #1a2b49;
+    margin-bottom: 12px;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    width: 70px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.bar-bg {
+    flex: 1;
+    background-color: #e6ebf1;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    background-color: #FF8FC7;
+    height: 100%;
+    border-radius: 6px;
+}

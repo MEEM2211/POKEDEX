@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Fiche Pokémon</title>
+    <script src="js/pokedex.js" defer></script>
+    <script src="js/details.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">✦ MON POKÉDEX</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="index2.html" class="active">Détails</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <a href="index.html" class="back-link">
+            ← Retour à l'accueil
+        </a>
+
+        <div class="details-heading">
+            <p>FICHE POKEMON</p>
+            
+        </div>
+
+        <div class="card-details" id="fiche">
+
+            <div class="image-box">
+                <div class="pokemon-number" id="numero"></div>
+                <img id="image" src="" alt="Image du Pokémon">
+            </div>
+
+            <div class="info-box">
+
+                <h2 class="pokemon-name" id="nom"></h2>
+
+                <div class="type-container">
+                    <span class="badge" id="type"></span>
+                </div>
+
+                <h3 class="section-title">Informations générales</h3>
+
+                <ul class="characteristics">
+                    <li>
+                        <span>Taille</span>
+                        <strong id="taille"></strong>
+                    </li>
+                    <li>
+                        <span>Poids</span>
+                        <strong id="poids"></strong>
+                    </li>
+                    <li>
+                        <span>Talent</span>
+                        <strong id="talent"></strong>
+                    </li>
+                    <li>
+                        <span>Catégorie</span>
+                        <strong id="categorie"></strong>
+                    </li>
+                    <li>
+                        <span>Sexe</span>
+                        <strong id="sexe"></strong>
+                    </li>
+                </ul>
+
+                <div class="stats">
+                    <h3 class="section-title">Statistiques</h3>
+
+                    <div class="stat-row">
+                        <span class="stat-label">PV</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" id="pv"></div>
+                        </div>
+                        <span class="stat-value" id="pv-val"></span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Attaque</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" id="attaque"></div>
+                        </div>
+                        <span class="stat-value" id="attaque-val"></span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Défense</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" id="defense"></div>
+                        </div>
+                        <span class="stat-value" id="defense-val"></span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Att. spé.</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" id="attaque_speciale"></div>
+                        </div>
+                        <span class="stat-value" id="attaque_speciale-val"></span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Déf. spé.</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" id="defense_speciale"></div>
+                        </div>
+                        <span class="stat-value" id="defense_speciale-val"></span>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Vitesse</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" id="vitesse"></div>
+                        </div>
+                        <span class="stat-value" id="vitesse-val"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>✦ Mon Pokédex — Attrape-les tous ! ✦</p>
+    </footer>
+
+    
+
+</body>
+</html>
+
+
+            
+            <!-- Illustration / Image 
+            <div class="image-box">
+                <img src="images/leveinard.png" alt="Leveinard">
+            </div>
+
+             Informations 
+            <div class="info-box">
+                <span class="pokemon-id">N° 0113</span>
+                <h2 class="pokemon-name">Leveinard</h2>
+                
+                <span class="badge badge-normal">Normal</span>
+
+                <ul class="characteristics">
+                    <li><strong>Taille :</strong> 1,1m</li>
+                    <li><strong>Poids :</strong> 34,6 kg</li>
+                    <li><strong>catégorie :</strong> oeuf</li>
+                    <li><strong>talent:</strong> medic nature, serenité</li>
+                    <li><strong>sexe :</strong> feminin</li>
+
+                </ul>
+
+                <div class="stats">
+                    <h3>Statistiques</h3>
+                    
+                    <div class="stat-row">
+                        <span class="stat-label">PV</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Attaque</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 6.7%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">Défense</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 6.7%;"></div>
+                        </div>
+                    </div>
+                        
+                    <div class="stat-row">
+                        <span class="stat-label">attaque spéciale</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                        
+                    <div class="stat-row">
+                        <span class="stat-label">Défense spéciale</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 46,7%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-row">
+                        <span class="stat-label">vitesse</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+-->
